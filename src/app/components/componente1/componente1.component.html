@@ -1,0 +1,45 @@
+<h2>Listado de productos</h2>
+
+<div *ngIf="productos.length">
+    <h3>Tabla de productos</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Código</td>
+                <td>Nombre</td>
+                <td>Precio</td>
+                <td>Disponible</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos">
+                <td>{{producto.codigo}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.disponible}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Todos los productos</h3>
+    <ul>
+        <li *ngFor="let producto of productos">
+            {{producto.nombre}}
+        </li>
+    </ul>
+    
+    <h3>Eliminar producto</h3>
+    <button (click)=borrar()>
+        Borrar elemento
+    </button>
+
+</div>
+
+<h3>Productos filtrados</h3>
+<ul>
+    <li *ngFor="let producto of productosFiltrados">
+        <div *ngIf="producto.disponible">
+            {{producto.nombre}}
+        </div>
+    </li>
+</ul>
