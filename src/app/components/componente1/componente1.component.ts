@@ -20,7 +20,7 @@ const PRODUCTOS: Producto[] = [
   templateUrl: './componente1.component.html',
   styleUrls: ['./componente1.component.css']
 })
-export class Componente1Component implements OnInit {
+export class Componente1Component implements OnInit { // Implementamos el interface OnInit
 
   // Variables de instancia
   productos = PRODUCTOS;

@@ -1,1 +1,48 @@
-<p>componente2 works!</p>
+<h2>Alta vehículo</h2>
+<h3>Estado de las variables</h3>
+
+<p>Marca: {{marca}}</p>
+<p>Color: {{color}}</p>
+<p>Año: {{year}}</p>
+<p>Descapotable: {{descapotable}}</p>
+<p>Cambio: {{cambio}}</p>
+<p>Grado de contaminación: {{gradoContaminacion}}</p>
+
+<h3>Inputs</h3>
+<div>
+    Marca: <br>
+    <input type="text" [(ngModel)]="marca">
+</div>
+<br>
+<div>
+    Color: <br>
+    <select [(ngModel)]="color">
+        <option value="blanco">Blanco</option>
+        <option value="azul">Azul</option>
+        <option value="rojo">Rojo</option>
+        <option value="negro">Negro</option>
+        <option value="gris">Gris</option>
+    </select>
+</div>
+<br>
+<div>
+    Year: <br>
+    <input type="number" [(ngModel)]="year" min="1965" max="2020">
+</div>
+<br>
+<div>
+    Descapotable: <br>
+    <input type="checkbox" [(ngModel)]="descapotable" value="Si">
+</div>
+<br>
+<div>
+    Cambio: <br>
+    <input type="radio" [(ngModel)]="cambio" value="manual">Manual<br>
+    <input type="radio" [(ngModel)]="cambio" value="automatico">Automático
+</div>
+<br>
+<div>
+    Grado de contaminación: <br>
+    <input type="range" [(ngModel)]="gradoContaminacion" min="0" max="10">
+</div>
+<br>
